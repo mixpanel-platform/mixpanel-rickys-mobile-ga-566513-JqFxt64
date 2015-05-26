@@ -147,12 +147,12 @@
 
         $.extend(params, dateRange);
         // Lets make requests
-        var $segment = MP.api.segment(eventName, params);
         var data = {};
         var dates = []
         function precise_round(num,decimals){
                    return Math.round(num * Math.pow(10,decimals))/Math.pow(10,decimals);
                  }
+
         Promise.all(promises).then(function(promiseArray){
           _.each(promiseArray, function(segData, index){
             var displayType = displayTypeDiv.MPSelect('value');
