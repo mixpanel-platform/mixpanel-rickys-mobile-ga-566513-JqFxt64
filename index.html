@@ -126,7 +126,8 @@
         var currentDate = new Date (dateRange.from);
         while (currentDate <= dateRange.to) {
           var timestamp = Math.floor(currentDate.getTime() / 1000);
-          var whereString = '(number(properties["Time of Registration"]) >='+ timestamp + ' and number(properties["Time of Registration"]) <=' + (timestamp + 86400)+ ' '+swipeType+')';
+          var propertyStr = "Registration Date"
+          var whereString = '(number(properties["' + propertStr + '"]) >='+ timestamp + ' and number(properties["' + propertyStr + '"]) <=' + (timestamp + 86400) + ')';
           var queryType = queryTypeDiv.MPSelect('value');
           var params = {
             type: queryType,
