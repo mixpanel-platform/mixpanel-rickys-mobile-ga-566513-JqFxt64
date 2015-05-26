@@ -115,14 +115,11 @@
       var eventNameDiv = $('#eventSelect').MPEventSelect();
       var queryTypeDiv = $('#queryType').MPSelect(queryTypeOptions);
       var displayTypeDiv = $('#displayType').MPSelect(displayTypeOptions);
-      var propertyTypeDiv = $('#propertyType').MPSelect(propertyTypeOptions)
-  
      var runQuery = function(){
         $("#table").empty();
         $("#table").append("<tr class='row header'><th class='cohort'>Cohort</th><th class='day'>Day 1</th><th class='day'>Day 2</th><th class='day'>Day 3</th><th class='day'>Day 4</th><th class='day'>Day 5</th><th class='day'>Day 6</th><th class='day'>Day 7</th><th class='day'>Day 14</th><th class='day'>Day 30</th></tr>");
         var dateRange = dateSelect.MPDatepicker('value');
         var eventName = eventNameDiv.MPEventSelect('value');
-        var swipeType = propertyTypeDiv.MPSelect('value');
         var promises = [];
         var cohorts = [];
         // Date selectors
